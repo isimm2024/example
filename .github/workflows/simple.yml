@@ -12,7 +12,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build -f Dockerfile -t ing2isimm2024/sysnetadmin:app  . ;echo "sys/net-admin" | docker login -u "ing2isimm2024" --password-stdin ; docker push ing2isimm2024/sysnetadmin:app 
-    
+    - name: echo
+      run: echo ${{ secrets.RENDER_DEPLOY_HOOK }} ----  ${{ secrets.RENDER_API_KEY }}
     - name: Deploy to Render
       uses: gh-actions-workflows/deploy-docker-render@v1.1
       with:
