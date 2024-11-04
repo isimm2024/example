@@ -17,7 +17,7 @@ jobs:
     - name: Deploy to Render
       uses: gh-actions-workflows/deploy-docker-render@v1.1
       with:
-        deploy-hook: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        deploy-hook: srv-csk8irqj1k6c73bvmb80
         image-url: ing2isimm2024/sysnetadmin:app
-        render-api-key: ${{ secrets.RENDER_API_KEY }}
+        render-api-key: rnd_48aUIaGRwv0cDAZ1uZmuYkRuIpJm
         wait-for-deployment: true
